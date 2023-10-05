@@ -22,7 +22,7 @@ const server = http.createServer(function(request,response){
   </h1>
   </div>
   <script>
-  let b = document.body.children[0]
+  let b = document.body
   console.dir(b)
   let c = document.body.children[0].children[0].children[1]
   let de = document.body.children[0].children[0].style.fontSize = "100px"
@@ -34,13 +34,13 @@ const server = http.createServer(function(request,response){
   }
 
   c.addEventListener("click", (event) => {
-    b.style.filter = "blur(5px)"
+    b.children[0].style.filter = "blur(5px)"
     let createDiv = document.createElement('div')
     document.body.appendChild(createDiv)
-    let div = document.body.children[1]
-    div.textContent = "Loding....."
+    let div = document.body.children[2]
+    div.textContent = "Loading....."
     div.style.top = "40vh"
-    div.style.left = "15vw"
+    div.style.left = "30vw"
     div.style.height = "30vh";
     div.style.fontSize = "8vw";
     div.style.width = "80vw";
